@@ -1,0 +1,79 @@
+XML is widely used technology to transport or store data. Java Provides various API’s for processing XML; for example DOM, SAX, StAX, JAXB. There are other APIs available for XML Processing, for example JDOM. This tutorial is aimed to explore different kinds of XML Processing API’s and to learn some common tasks we need to perform with XML.
+
+java-xml
+
+DOM XML Parser
+
+DOM Parser is the easiest parser to learn, it loads the XML file into memory and we can traverse it node by node to parse the XML. DOM Parser is good for small files but when file size increases it performs slow and consumes more memory.
+
+Read XML File
+This article shows how to use DOM Parser to parse XML file to Object.
+Write XML File
+This article explains how to use DOM Parser to write Object data to XML file.
+Edit XML File
+DOM Parser can be used to edit XML data also. This article shows how to add elements, remove elements, edit element values, edit attributes in an XML document using DOM Parser.
+SAX XML Parser
+
+Java SAX Parser provides API to parse XML documents. SAX Parsers are different than DOM parser because it doesn’t load complete XML into memory and read xml document sequentially. It’s an event based parser and we need to implement our Handler class with callback methods to parse XML file. It’s more efficient than DOM Parser for large XML files in terms of time and memory usage.
+
+Read XML File
+Learn how to create our Callback Handler class to read XML file to list of Objects using SAX Parser.
+StAX XML Parser
+
+Java Streaming API for XML (Java StAX) provides implementation for processing XML in java. StAX consists of two sets of API – cursor based API and iterator based API.
+
+Read XML File Using StAX Iterator API
+In this tutorial we will learn how to read XML iteratively using Java StAX (XMLEventReader).
+Write XML File Using StAX Iterator API
+In this tutorial we will see how we can write XML file in java using StAX Iterator based API (XMLEventWriter).
+Read XML File Using StAX Cursor API
+This article shows how to use StAX Cursor API (XMLStreamReader) to read XML data to Object.
+Write XML File Using StAX Cursor API
+Java StAX Cursor API is very straight forward in creating XML and outputting it. We need to create XMLStreamWriter object and write data into it. This tutorial explains it in detail with example.
+JDOM XML Parser
+
+JDOM provides a great Java XML API to read, edit and write XML documents easily. JDOM provides wrapper classes to chose your underlying implementation from SAX Parser, DOM Parser, STAX Event Parser and STAX Stream Parser.
+Benefit of using JDOM is that you can switch from SAX to DOM to STAX Parser easily, you can provide factory methods to let client application chose the implementation.
+
+JDOM Read XML File
+In this tutorial, we will learn how to read XML file to Object using JDOM XML Parser.
+JDOM Write XML File
+In this tutorial we will learn how to write XML file in Java using JDOM. JDOM Document provides methods to easily create elements and attributes. XMLOutputter class can be used to write the Document to any OutputStream or Writer object.
+JDOM Edit XML File
+JDOM provides very neat way to manipulate XML files, using JDOM is very easy and the code looks clean and readable. In this tutorial we will learn how to add element, remove element, edit element value and edit attribute value.
+JAXB
+
+Java Architecture for XML Binding (JAXB) provides API for converting Object to XML and XML to Object easily. JAXB was developed as a separate project but it was used widely and finally became part of JDK in Java 6.
+
+
+ 
+JAXB Tutorial
+Using JAXB is very easy and it uses annotations. We need to annotate Java Object to provide instructions for XML creation and then we have to create Marshaller to convert Object to XML. Unmarshaller is used to convert XML to java Object. In this tutorial we will learn most widely used JAXB annotations and how to convert a Java Object to XML (Marshalling) and XML to Java Object (Unmarhsalling).
+JiBX
+
+JiBX is a very powerful framework for converting XML data to java object and vice versa. It is very useful in applications integration where XML is the format for data transfer, for example, Web Services and Legacy Systems Integration based on Message Oriented Model (MOM).
+
+JiBX Tutorial
+There are many frameworks available for XML transformation such as JAXB and XMLBeans but JiBX differs in the approach for XML binding and transformation process. JiBX performs these tasks via utility classes generated at compile time via ant scripts. This approach reduces the processing time by moving away from the traditional two-step process with other parsers to a single step.
+XPath
+
+XPath provides syntax to define part of an XML document. XPath Expression is a query language to select part of the XML document based on the query String. Using XPath Expressions, we can find nodes in any xml document satisfying the query string.
+
+XPath Tutorial
+javax.xml.xpath package provides XPath support in Java. To create XPathExpression, XPath API provide factory methods. In this tutorial we will use XPath query language to find out elements satisfying given criteria.
+Misc XML Tasks
+
+Generate Sample XML from XSD in Eclipse
+If you work on webservices, you must have been using XSD’s and to test the webservice, you need to generate XML from XSD file. Eclipse provide a very easy way to generate XML from XSD.
+Validate XML against XSD
+Java XML Validation API can be used to validate XML against an XSD. javax.xml.validation.Validator class is used in this tutorial to validate xml file against xsd file.
+Java XML Property File
+Usually we store configurations parameters for java applications in a property file. In java property file can be a normal property file with key-value pairs or it can be an XML file also.
+In this example, we will learn how to write property XML file and then read properties from XML property files.
+SOAP XML
+Soap is an Xml based transport protocol. Soap stands for Simple Object Access Protocol. Soap is a lightweight mechanism for exchanging structured and typed information. As it is XML based so it is language and platform independent.
+In this tutorial you will learn about SOAP XML and how can we create it using Liquid XML Studio software.
+Format XML Document
+A utility class with methods for pretty printing XML and converting XML Document to String and String to XML document.
+Convert Document to String and String to Document
+Sometimes while programming in java, we get String which is actually an XML and to process it, we need to convert it to XML Document (org.w3c.dom.Document). Also for debugging purpose or to send to some other function, we might need to convert Document object to String. Two utility methods to convert String to XML Document and XML Document to String.
